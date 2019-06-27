@@ -192,7 +192,7 @@ namespace gridtools {
             if (timer_enabled)
                 m_meter.reset(new performance_meter_t{"NoName"});
 #ifndef NDEBUG
-            for_each_type<non_tmp_placeholders_t>(check_grid_against_extents_f{m_grid});
+                // for_each_type<non_tmp_placeholders_t>(check_grid_against_extents_f{m_grid});
 #endif
         }
 
