@@ -12,5 +12,6 @@ install(TARGETS gcl EXPORT GridToolsTargets
   RUNTIME DESTINATION bin
   INCLUDES DESTINATION include
 )
+set_target_properties( gcl PROPERTIES EXPORT_NAME GridTools::gcl )
 
 add_subdirectory(tools)

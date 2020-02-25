@@ -14,6 +14,7 @@ set(CMAKE_CUDA_EXTENSIONS OFF)
 
 add_library(gridtools INTERFACE)
 add_library(GridTools::gridtools ALIAS gridtools)
+set_target_properties( gridtools PROPERTIES EXPORT_NAME GridTools::gridtools )
 target_compile_features(gridtools INTERFACE cxx_std_14)
 target_include_directories(gridtools
     INTERFACE

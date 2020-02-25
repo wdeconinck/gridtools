@@ -30,15 +30,14 @@ write_basic_package_version_file(
   COMPATIBILITY SameMajorVersion )
 
 install(TARGETS cpp_bindgen_interface EXPORT GridToolsTargets)  #TODO remove cpp_bindgen_interface in GT 2.0
+set_target_properties( cpp_bindgen_interface PROPERTIES EXPORT_NAME GridTools::cpp_bindgen_interface )
 
 export(EXPORT GridToolsTargets
     FILE ${PROJECT_BINARY_DIR}/GridToolsTargets.cmake
-    NAMESPACE GridTools::
 )
 
 install(EXPORT GridToolsTargets
   FILE GridToolsTargets.cmake
-  NAMESPACE GridTools::
   DESTINATION lib/cmake
 )
 
